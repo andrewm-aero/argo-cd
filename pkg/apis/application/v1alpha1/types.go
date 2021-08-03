@@ -244,6 +244,8 @@ type HelmParameter struct {
 	Value string `json:"value,omitempty" protobuf:"bytes,2,opt,name=value"`
 	// ForceString determines whether to tell Helm to interpret booleans and numbers as strings
 	ForceString bool `json:"forceString,omitempty" protobuf:"bytes,3,opt,name=forceString"`
+	// NoExpand disables $-style expansion if set to true
+	NoExpand bool `json:"noExpand,omitempty" protobuf:"bytes,4,opt,name=noExpand"`
 }
 
 // HelmFileParameter is a file parameter that's passed to helm template during manifest generation
